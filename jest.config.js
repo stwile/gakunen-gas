@@ -1,19 +1,19 @@
 /** @type {import('ts-jest/dist/types').InitialOptionsTsJest} */
 module.exports = {
-  preset: "ts-jest",
-  testEnvironment: "node",
-  globals: {
-    "ts-jest": {
-      tsconfig: "./tsconfig.test.json",
-    },
-  },
-  reporters: ["default", "github-actions"],
   coverageReporters: [
     [
-      "text",
+      'text',
       {
-        file: "report.txt",
+        file: 'report.txt',
       },
     ],
   ],
+  globals: {
+    'ts-jest': {
+      tsconfig: './tsconfig.test.json',
+    },
+  },
+  preset: 'ts-jest',
+  reporters: ['default', 'github-actions'],
+  testEnvironment: 'node',
 };

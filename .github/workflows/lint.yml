@@ -1,9 +1,9 @@
-name: test
+name: lint
 
 on: pull_request
 
 jobs:
-  test:
+  lint:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -18,10 +18,7 @@ jobs:
           node-version: ${{ steps.get-node-version.outputs.nodeVersion }}
           cache: yarn
 
-      - name: coverage
+      - name: lint
         run: |
           yarn
-          yarn coverage
-          echo '# Coverage :rocket:' >> $GITHUB_STEP_SUMMARY
-          # sed で先頭行と末尾行の不要な罫線を消す
-          cat coverage/report.txt | sed '1d' | sed '$d' >> $GITHUB_STEP_SUMMARY
+          yarn lint
