@@ -6,16 +6,43 @@
   "devDependencies": {
     "@types/google-apps-script": "^1.0.56",
     "@types/jest": "^28.0.0",
+    "@typescript-eslint/eslint-plugin": "^5.47.1",
+    "@typescript-eslint/parser": "^5.47.1",
+    "eslint": "^8.30.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-sort-keys-fix": "^1.1.2",
+    "eslint-plugin-typescript-sort-keys": "^2.1.0",
+    "eslint-plugin-unused-imports": "^2.0.0",
+    "husky": "^8.0.0",
     "jest": "^28.0.0",
+    "lint-staged": "^13.1.0",
+    "prettier": "^2.8.1",
     "ts-jest": "^28.0.0",
     "typescript": "^4.9.4"
   },
   "scripts": {
     "test": "jest",
-    "coverage": "jest --coverage"
+    "coverage": "jest --coverage",
+    "lint": "eslint --ext .ts,.js",
+    "lint:fix": "eslint --ext .ts,.tsx,.js --fix",
+    "format": "prettier --write --ignore-path .gitignore './**/*.{js,ts,json}'",
+    "pre-commit": "lint-staged",
+    "prepare": "husky install"
   },
   "volta": {
     "node": "18.12.1",
     "yarn": "1.22.19"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx,json,md,css}": [
+      "prettier --write"
+    ]
   }
 }
