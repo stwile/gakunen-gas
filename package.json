@@ -1,0 +1,21 @@
+{
+  "name": "gakunen-gas",
+  "version": "1.0.0",
+  "main": "main.ts",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/google-apps-script": "^1.0.56",
+    "@types/jest": "^28.0.0",
+    "jest": "^28.0.0",
+    "ts-jest": "^28.0.0",
+    "typescript": "^4.9.4"
+  },
+  "scripts": {
+    "test": "jest",
+    "coverage": "jest --coverage"
+  },
+  "volta": {
+    "node": "18.12.1",
+    "yarn": "1.22.19"
+  }
+}
