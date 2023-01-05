@@ -1,14 +1,19 @@
-import { judgeGrade, Grade } from '../src/main';
+import { judgeGrade } from '../src/main';
+
+import type { Grade } from './../src/children/childrenInterface';
 
 describe('年齢ごとに正しく学年を取得できるべき', (): void => {
   test('0歳以下の場合、エラーが返るべき', () => {
-    expect(judgeGrade(0)).toEqual(new Error('0: は年齢として正しい数字ではありません'));
+    expect(() => {
+      judgeGrade(0);
+    }).toThrowError(new Error('0: は年齢として正しい数字ではありません'));
   });
 
   test.each`
     age   | expected
     ${1}  | ${'未就学児'}
     ${2}  | ${'未就学児'}
+    ${3}  | ${'未就学児'}
     ${4}  | ${'未就学児'}
     ${5}  | ${'未就学児'}
     ${6}  | ${'小学校低学年'}
