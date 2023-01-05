@@ -1,9 +1,7 @@
 {
   "compilerOptions": {
     "target": "esnext",
-    "lib": [
-      "esnext"
-    ],
+    "lib": ["esnext"],
     "allowJs": false,
     "skipLibCheck": true,
     "strict": true,
@@ -18,13 +16,12 @@
     "sourceMap": true,
     "inlineSources": true,
     "sourceRoot": "/",
+    "baseUrl": "./",
+    "paths": {
+      "~/*": ["src/*"]
+    },
     "incremental": true
   },
-  "exclude": [
-    "node_modules"
-  ],
-  "include": [
-    "**/*.ts",
-    "**/*.js"
-  ]
+  "exclude": ["node_modules"],
+  "include": ["**/*.ts", "**/*.js"]
 }

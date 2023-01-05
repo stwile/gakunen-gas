@@ -1,14 +1,13 @@
-import { Adult } from '../../src/children/adult';
-import { getChildren } from '../../src/children/index';
+import type { ChildrenInterface } from '~/children/childrenInterface';
 
-import { HighSchool } from './../../src/children/highSchool';
-import { LowerElementarySchool } from './../../src/children/lowerElementarySchool';
-import { MiddleSchool } from './../../src/children/middleSchool';
-import { PreSchoolChild } from './../../src/children/preSchoolChild';
-import { University } from './../../src/children/university';
-import { UpperElementarySchool } from './../../src/children/upperElementarySchool';
-
-import type { ChildrenInterface } from '../../src/children/childrenInterface';
+import { getChildren } from '~/children';
+import { Adult } from '~/children/adult';
+import { HighSchool } from '~/children/highSchool';
+import { LowerElementarySchool } from '~/children/lowerElementarySchool';
+import { MiddleSchool } from '~/children/middleSchool';
+import { PreSchoolChild } from '~/children/preSchoolChild';
+import { University } from '~/children/university';
+import { UpperElementarySchool } from '~/children/upperElementarySchool';
 
 describe('年齢ごとに正しく学年を取得できるべき', (): void => {
   test('0歳以下の場合、エラーが返るべき', () => {

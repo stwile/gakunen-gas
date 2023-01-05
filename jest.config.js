@@ -13,6 +13,9 @@ module.exports = {
       tsconfig: './tsconfig.test.json',
     },
   },
+  moduleNameMapper: {
+    '~(.*)$': '<rootDir>/src/$1',
+  },
   preset: 'ts-jest',
   reporters: ['default', 'github-actions'],
   testEnvironment: 'node',

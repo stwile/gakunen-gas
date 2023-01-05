@@ -1,6 +1,5 @@
-import { GradeError } from '../../src/errors/GradeError';
-
-import { PreSchoolChild } from './../../src/children/preSchoolChild';
+import { PreSchoolChild } from '~/children/preSchoolChild';
+import { GradeError } from '~/errors/GradeError';
 
 describe('適切な年齢の場合、インスタンスが返るべき', (): void => {
   test.each`

@@ -1,6 +1,6 @@
-import { GradeError } from '../errors/GradeError';
-
 import type { Grade, ChildrenInterface } from './childrenInterface';
+
+import { GradeError } from '~/errors/GradeError';
 
 export class PreSchoolChild implements ChildrenInterface {
   readonly grade: Grade = '未就学児';
