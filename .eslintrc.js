@@ -27,5 +27,7 @@ module.exports = {
     'sort-keys-fix/sort-keys-fix': 'error',
     'typescript-sort-keys/interface': 'error',
     'unused-imports/no-unused-imports': 'error',
+    '@typescript-eslint/consistent-type-imports': ['error', { prefer: 'type-imports' }],
+    'import/no-relative-parent-imports': 'error',
   },
 };

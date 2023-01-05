@@ -1,4 +1,4 @@
-import type { Grade } from '../children/childrenInterface';
+import type { Grade } from '~/children/childrenInterface';
 
 type GradeErrorMsg = `${number}: ${Grade}の年齢として正しい数字ではありません`;
 

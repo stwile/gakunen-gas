@@ -1,6 +1,6 @@
-import { GradeError } from '../errors/GradeError';
-
 import type { ChildrenInterface, Grade } from './childrenInterface';
+
+import { GradeError } from '~/errors/GradeError';
 
 export class MiddleSchool implements ChildrenInterface {
   readonly grade: Grade = '中学生';

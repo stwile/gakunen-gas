@@ -1,6 +1,6 @@
-import { judgeGrade } from '../src/main';
+import type { Grade } from '~/children/childrenInterface';
 
-import type { Grade } from './../src/children/childrenInterface';
+import { judgeGrade } from '~/main';
 
 describe('年齢ごとに正しく学年を取得できるべき', (): void => {
   test('0歳以下の場合、エラーが返るべき', () => {

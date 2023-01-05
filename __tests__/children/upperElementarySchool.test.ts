@@ -1,5 +1,5 @@
-import { UpperElementarySchool } from '../../src/children/upperElementarySchool';
-import { GradeError } from '../../src/errors/GradeError';
+import { UpperElementarySchool } from '~/children/upperElementarySchool';
+import { GradeError } from '~/errors/GradeError';
 
 describe('適切な年齢の場合、インスタンスが返るべき', (): void => {
   test.each`
