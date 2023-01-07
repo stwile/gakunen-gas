@@ -29,6 +29,7 @@
     "lint:fix": "eslint --ext .ts,.tsx,.js --fix",
     "format": "prettier --write --ignore-path .gitignore './**/*.{js,ts,json}'",
     "pre-commit": "lint-staged",
+    "pre-push": "tsc",
     "prepare": "husky install"
   },
   "volta": {

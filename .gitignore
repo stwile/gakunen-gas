@@ -6,3 +6,4 @@
 .pnp.js
 /coverage
 .clasp.json
+tsconfig.tsbuildinfo
